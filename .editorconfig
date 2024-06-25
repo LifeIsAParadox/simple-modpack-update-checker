@@ -1,0 +1,18 @@
+# Editor configuration, see http://editorconfig.org
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+
+[*.java]
+indent_size = 4
+ij_java_imports_layout = $*, |, de.hysky.**, |, java.**, |, javax.**, |, *, |, net.minecraft.**, |, net.fabricmc.**
+ij_java_class_count_to_use_import_on_demand = 999
+
+[.editorconfig]
+indent_size = 4

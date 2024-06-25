@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "simple-modpack-update-checker",
+  "version": "${version}",
+  "name": "Simple Modpack Update Checker",
+  "description": "simple mod to check if modpack is up to date",
+  "authors": [
+    "LifeIsAParadox/Wohlhabend"
+  ],
+  "contact": {
+    "sources": "https://github.com/LifeIsAParadox/simple-modpack-update-checker",
+    "issues": "https://github.com/LifeIsAParadox/simple-modpack-update-checker/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/simple-modpack-update-checker/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "de.hysky.SimpleModpackUpdateChecker"
+    ]
+  },
+  "mixins": [
+    "simple-modpack-update-checker.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": ">=1.21",
+    "java": ">=21"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.modrinth": "https://modrinth.com/mod/smuc"
+      }
+    }
+  }
+}
