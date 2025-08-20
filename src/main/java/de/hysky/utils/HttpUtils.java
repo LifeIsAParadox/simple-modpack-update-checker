@@ -9,15 +9,10 @@ import java.net.http.HttpResponse;
 import java.time.Duration;
 
 public class HttpUtils {
-    private static final HttpClient client = HttpClient.newBuilder()
-        .connectTimeout(Duration.ofSeconds(10))
-        .build();
+    private static final HttpClient client = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(10)).build();
 
     public static String sendGetRequest(String url) throws IOException, InterruptedException, URISyntaxException {
-        HttpRequest request = HttpRequest.newBuilder()
-            .uri(new URI(url))
-            .timeout(Duration.ofSeconds(10))
-            .build();
+        HttpRequest request = HttpRequest.newBuilder().uri(new URI(url)).timeout(Duration.ofSeconds(10)).build();
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
